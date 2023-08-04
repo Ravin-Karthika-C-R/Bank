@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+.navbar {
+    padding: 6px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    color: rgb(12, 12, 12);
+    font-size: 17px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav a{
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 35px;
+    
+    margin-left: 30px;
+}
+nav a:hover{
+    border-bottom: solid black 4px ;
+}
+.logo{
+    float: left;
+    margin: 10px 15px 15px 10px;
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+    border-bottom: none;
+}
+.dropdown-menu{
+    padding: 12px;
+}
