@@ -38,15 +38,15 @@
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input (change)="acnoChange($event)"  type="text" [placeholder]="data2" required>
+                    <input #acno type="text" [placeholder]="data2" required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input (change)="pswChange($event)" type="password" [placeholder]="data3" required>
+                    <input #psw type="password" [placeholder]="data3" required>
                   </div>
                   <div class="text"><a href="#">Forgot password?</a></div>
                   <div class="button input-box">
-                    <input (click)="login()" type="submit" value="Login">
+                    <input (click)="login(acno,psw)" type="button" value="Login">
                   </div>
                   <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
                 </div>

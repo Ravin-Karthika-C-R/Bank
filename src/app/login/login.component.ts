@@ -11,18 +11,12 @@ export class LoginComponent  {
   data3="Enter your password"
 
   
-  login(){
-    alert("Login clicked")
-  }
-
-  acnoChange(event:any){
-    console.log(event.target.value);
+  login(a:any,b:any){
+    console.log(a.value);
+    console.log(b.value);
     
-  }
-
-  pswChange(event:any){
-    console.log(event.target.value);
     
+    // alert("Login clicked")
   }
 
 }
