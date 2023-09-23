@@ -1,9 +1,9 @@
 
 <body>
   
-  <div class="container">
+  <div class="cc1">
     <h1 class="text-dark ">Welcome To BOA </h1>
-    <h4 style="color: rgb(13, 138, 138); padding-top: 0%; margin-left: 4%;">{{data}}</h4>
+    <h4 style="color: rgb(13, 138, 138); padding-top: 0%; margin-left: 1%;">{{data}}</h4>
   </div>
     <div class="container">
         <input type="checkbox" id="flip">
@@ -27,54 +27,60 @@
             <div class="form-content">
               <div class="login-form">
                 <div class="title">Login</div>
-              <form action="#">
+              <form (ngSubmit)="login()" [formGroup]="loginForm" action="#">
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input [(ngModel)]="acno" id="ac1" type="text" [placeholder]="data2" name="accountNumber" required>
+                    <input formControlName="acno" [(ngModel)]="acno" id="ac1" type="text" [placeholder]="data2" name="accountNumber" required>
+                  </div>
+                  <div *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched">
+                    <p class="text-danger">Accept only numbers</p>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input [(ngModel)]="psw" id="ps1" type="password" [placeholder]="data3" name="password" required>
+                    <input formControlName="psw" [(ngModel)]="psw" id="ps1" type="password" [placeholder]="data3" name="password" required>
                   </div>
-                  <div class="text"><a href="#">Forgot password?</a></div>
+                  <div *ngIf="this.loginForm.get('psw')?.errors && this.loginForm.get('psw')?.touched">
+                    <p class="text-danger">Accept only numbers and characters</p>
+                  </div>
+                  <!-- <div class="text"><a href="#">Forgot password?</a></div> -->
                   <div class="button input-box">
-                    <input (click)="login()" type="button" value="Login">
+                    <input  type="submit" value="Login">
                   </div>
                   <div class="text sign-up-text">Don't have an account?
-                     <label for="flip">Sigup now</label>
-                     <!-- <a routerLink="signup">Sigup now</a> -->
+                     <!-- <label for="flip">Sigup now</label> -->
+                     <a routerLink="signup">Sigup now</a>
                   </div>
                 </div>
             </form>
           </div>
-            <div class="signup-form">
+            <!-- <div class="signup-form">
               <div class="title">Signup</div>
             <form action="#">
                 <div class="input-boxes">
                   <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="number" placeholder="accno" required>
+                    <input type="number" placeholder="accno"name="accountnumber" id="accno" required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-envelope"></i>
-                    <input type="text" placeholder="Enter your username" required>
+                    <input type="text" placeholder="Enter your username" id="un1" name="username"required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input type="password" placeholder="Enter your password" id="ps1" name="password"required>
                   </div>
                   <div class="input-box">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Confirm password" required>
+                    <input type="password" placeholder="Confirm password" id="cp1" name="Confirm password"required>
                   </div>
                   <div class="button input-box">
-                    <input type="submit" value="Signup">
+                    <input type="button" (click)="signup()" for="flip" value="Signup">
                   </div>
                   <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
                 </div>
           </form>
-        </div>
+        </div> -->
         </div>
         </div>
       </div>

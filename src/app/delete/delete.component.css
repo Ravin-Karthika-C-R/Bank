@@ -1,0 +1,29 @@
+.btn {
+    padding: 14px 26px;
+    background: #9df074;
+    border-radius: 5px;
+    border: 2px solid #81e072;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .btn:last-child {
+    border: 2px solid #e07272;
+    background: transparent;
+    color: #ffffff;
+  }
+  .btn:last-child:hover {
+    background-color:#f26f68 ;
+    color: #333;
+  }
+  .container{
+    padding: 20px;
+    margin-left: 20px;
+    align-items: center;
+    background-color: #0d0d0d;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+  }
+  h3{
+    align-items: center;
+  }

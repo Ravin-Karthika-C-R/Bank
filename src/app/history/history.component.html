@@ -1,0 +1,61 @@
+<body>
+  <!-- <h1 class="text-danger">Account Statement</h1> -->
+<div class="container">
+  <div class="btn-group btn1" role="group" aria-label="Basic outlined example">
+    <button (click)="filterData('')" type="button" class="btn btn-outline-dark" >All</button>
+    <button (click)="filterData('DEBIT')" type="button" class="btn btn-outline-dark" >Debit</button>
+    <button (click)="filterData('CREDIT')" type="button" class="btn btn-outline-dark">Credit</button>
+  </div><br><br>
+  <h5>{{date | date : 'short'}}</h5>
+
+  <div *ngIf="spinner" class="text-center p-3">
+    <i class="fa-solid fa-spinner fa-3x fa-spin-pulse" style="color: #286467;"></i>
+  </div>
+  <div class="container">
+    <table  *ngIf="!spinner" class="table table-primary table-striped-columns border-2 p-3 mt-3">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Account Holder Name</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+                              <!-- data | pipename : searchString : searchKey -->
+        <tr *ngFor="let i of transactionArray | filter : searchTerm:'type' , let j=index">
+          <th scope="row">{{j+1}}</th>
+          <td>{{i.type}}</td>
+          <td>{{i.amount}}</td>
+          <td>{{i.tacno}}</td>
+          <td>{{i.date}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+    <!-- <img src="https://www.digipay.guru/static/1686233a073a50210147f74ea4d0f4f8/20801/agency-banking-main.jpg" alt=""> -->
+
+  </div>
+  <!-- <div class="p-3">
+        <button type="button" class="btn  btn-primary ms-5">Export as</button>
+      </div> -->
+  <div class="col-5 p-3 ms-5 mt-3">
+
+    <button (click)="pdfExport()" class="btn btn-primary">Download
+      <i class="fa fa-download" aria-hidden="true"></i>
+
+    </button>
+  </div>
+
+
+
+  <div class="back me-5">
+    <button routerLink="/home" class="btn btn2 btn-primary">Back to home
+      <i class="fa fa-home" aria-hidden="true"></i>
+    </button>
+    <br><br><br>
+  </div>
+</div>
+  
+</body>

@@ -1,29 +1,44 @@
 
 <!-- row    -->
 <div class="hero container">
-  <div class="row container">
+  <div  class="row container">
     <!-- sidebar -->
     <div class=" col col-lg-4 md-3">
       <nav class="sidebar container">
-        <a href="#" class="logo">Dashboard</a>
+        <a href="#" class="logo"></a>
         <div class="menu-content">
           <ul class="menu-items">
-            
-            <li class="item">
-              <a data-bs-toggle="modal" data-bs-target="#exampleModal">View Profile</a>
+            <!-- <li class="item">
+              <a routerLink="/home">
+              &nbsp;  Home</a>
+            </li> -->
+            <li (click)="getbalance()" class="item">
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                &nbsp; &nbsp; View Profile</a>
             </li>
             <li class="item">
               <a  data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-              aria-controls="offcanvasScrolling">Money Transfer </a>
+              aria-controls="offcanvasScrolling"> <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#fcfcfd}</style><path d="M240.1 4.2c9.8-5.6 21.9-5.6 31.8 0l171.8 98.1L448 104l0 .9 47.9 27.4c12.6 7.2 18.8 22 15.1 36s-16.4 23.8-30.9 23.8H32c-14.5 0-27.2-9.8-30.9-23.8s2.5-28.8 15.1-36L64 104.9V104l4.4-1.6L240.1 4.2zM64 224h64V416h40V224h64V416h48V224h64V416h40V224h64V420.3c.6 .3 1.2 .7 1.8 1.1l48 32c11.7 7.8 17 22.4 12.9 35.9S494.1 512 480 512H32c-14.1 0-26.5-9.2-30.6-22.7s1.1-28.1 12.9-35.9l48-32c.6-.4 1.2-.7 1.8-1.1V224z"/></svg>&nbsp; 
+              &nbsp; Money Transfer </a>
+            </li>
+            <li (click)="getbalance()" class="item">
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal1"><svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M535 41c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l64 64c4.5 4.5 7 10.6 7 17s-2.5 12.5-7 17l-64 64c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l23-23L384 112c-13.3 0-24-10.7-24-24s10.7-24 24-24l174.1 0L535 41zM105 377l-23 23L256 400c13.3 0 24 10.7 24 24s-10.7 24-24 24L81.9 448l23 23c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L7 441c-4.5-4.5-7-10.6-7-17s2.5-12.5 7-17l64-64c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM96 64H337.9c-3.7 7.2-5.9 15.3-5.9 24c0 28.7 23.3 52 52 52l117.4 0c-4 17 .6 35.5 13.8 48.8c20.3 20.3 53.2 20.3 73.5 0L608 169.5V384c0 35.3-28.7 64-64 64H302.1c3.7-7.2 5.9-15.3 5.9-24c0-28.7-23.3-52-52-52l-117.4 0c4-17-.6-35.5-13.8-48.8c-20.3-20.3-53.2-20.3-73.5 0L32 342.5V128c0-35.3 28.7-64 64-64zm64 64H96v64c35.3 0 64-28.7 64-64zM544 320c-35.3 0-64 28.7-64 64h64V320zM320 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/></svg>
+                &nbsp; Balance Enquiry</a>
             </li>
             <li class="item">
-              <a data-bs-toggle="modal" data-bs-target="#exampleModal1">Balance Enquiry</a>
-            </li>
-            <li class="item">
-            <a href="#">Account Statement</a>
+            <a routerLink="/history">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M461.2 128H80c-8.84 0-16-7.16-16-16s7.16-16 16-16h384c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48H64C28.65 32 0 60.65 0 96v320c0 35.35 28.65 64 64 64h397.2c28.02 0 50.8-21.53 50.8-48V176c0-26.47-22.78-48-50.8-48zM416 336c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32 32z"/></svg>
+            &nbsp;&nbsp;  Account Statement</a>
           </li>
-          <li class="item">
-            <a href="#">Logout</a>
+          <li (click)="deleteActive()" class="item">
+            <a>
+              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M589.6 240l45.6-45.6c6.3-6.3 6.3-16.5 0-22.8l-22.8-22.8c-6.3-6.3-16.5-6.3-22.8 0L544 194.4l-45.6-45.6c-6.3-6.3-16.5-6.3-22.8 0l-22.8 22.8c-6.3 6.3-6.3 16.5 0 22.8l45.6 45.6-45.6 45.6c-6.3 6.3-6.3 16.5 0 22.8l22.8 22.8c6.3 6.3 16.5 6.3 22.8 0l45.6-45.6 45.6 45.6c6.3 6.3 16.5 6.3 22.8 0l22.8-22.8c6.3-6.3 6.3-16.5 0-22.8L589.6 240zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>
+            &nbsp;  Delete Account</a>
+          </li>
+          <li (click)="logout()" class="item">
+            <a>
+              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"/></svg>
+             &nbsp;&nbsp; Logout</a>
           </li>
             
           </ul>
@@ -31,25 +46,49 @@
       </nav>
     </div>
     <!-- main -->
-    <div class="column col col-lg-4 md-3">
-      <h1>{{sdata}}</h1>
-      <h2>Hi Anu, <br /></h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto? Consectetur enim obcaecati
-        velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum voluptates dolorum optio ab vitae.
-        Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
-      <div class="buttons">
+    <div [ngClass]="dAcno?'c2':''" class="column col col-lg-4 md-3">
+      
+      <h2 class="p-3" style="color: rgb(120, 36, 108);">Hi, Welcome {{name}} <br /></h2>
+      <p>BOA is one of the world’s leading financial institutions, serving individuals, small- and middle-market businesses, large corporations, and governments with a full range of banking, investment management and other financial and risk management products and services.</p>
+
+<br><br>
+      
+
+      <!-- <div class="buttons">
         <button class="btn">Read More</button>
         <button class="btn">Contact Us</button>
-      </div>
+      </div> -->
     </div>
     <!-- hero pic  -->
-    <div class="column col col-lg-4 md-3">
+    <div [ngClass]="dAcno?'c2':''" class="column col col-lg-4 md-3">
       <img src="assets/images/hero.png" alt="heroImg" class="hero_img" />
-      
     </div>
-  <img src="assets/images/bg-bottom-hero.png" alt="" class="curveImg" />
+<app-delete [data]="dAcno" (onCancel)="cancelp()" (onDelete)="yesDelete($event)"></app-delete>
+    <!-- <div class="text-white">
+      <h5>
+      Responsible growth
+
+      </h5><br>
+
+      <p class="text-white">
+        We are delivering on our purpose to help make financial lives better through our focus on responsible growth.
+        
+        Our commitment to responsible growth is resolute, and has four tenets:
+        
+        We have to grow — no excuses.
+        We have to be client focused.
+        We have to grow within our risk framework.
+        And, our growth must be sustainable, which has three elements: driving operational excellence, being a great place to work for our teammates and sharing our success with our communities.
+        By driving responsible growth, we deliver returns to our clients and shareholders and help address society’s biggest challenges.</p><br><br>
+        <img src="https://www.digipay.guru/static/1686233a073a50210147f74ea4d0f4f8/20801/agency-banking-main.jpg" alt="">
+    </div> -->
+    <div [ngClass]="dAcno?'c2':''">
+      <img src="assets/images/bg-bottom-hero.png" alt="" class="curveImg" />
+
+    </div>
     
   </div>
+  <br><br>
 </div>
 
 <!-- row ends  -->
@@ -72,21 +111,23 @@
 
       <div class="modal-body" style="color: #100f0f;
       text-align: center;
-      background-color: #4578de;">
+      background-color: #7a87f7;">
         <form action="">
-          <div class="mt-2 ">
-            <label for="">UserName</label>
-            <input type="text" id="uName" class="form-control" placeholder="username">
+          <div class="mt-2 p-2">
+            <label for="">User Name:&nbsp;&nbsp;{{name}}</label><br>
+
+            <label for="">Account No:&nbsp;&nbsp;{{acno}}</label>
+
+            
           </div>
-         <div class="mt-2">
-          <label for="">Account Number</label>
-          <input type="text" id="uName" class=" form-control" placeholder="acc no">
+         <div class="mt-2 p-2">
+          
          </div>
           
         </form>
       </div>
       <div class="modal-footer bg-dark">
-        <button type="button" class="btn btn-info">Save changes</button>
+        <button type="button" class="btn btn-info">Close</button>
       </div>
     </div>
   </div>
@@ -99,29 +140,44 @@
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
   id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header" style="background-color: rgb(249, 186, 186); color: aliceblue;">
+  <div class="offcanvas-header" style="background-color: rgb(106, 180, 233); color: aliceblue;">
     <h5 class="offcanvas-title" style="text-align: center; margin-left: 35%;" id="offcanvasScrollingLabel">Money Tranfer</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <img style="width: 100%;" src="https://i.ytimg.com/vi/CuS0lqOjyjI/maxresdefault.jpg" alt="">
 
-  <div class="offcanvas-body">
+  <div class="offcanvas-body bg-dark">
     <div>
      
-      <form action="">
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <form [formGroup]="moneyTransferForm" action="">
+        <div class="text-center text-white p-4">
+          <h4 [ngClass]="msgClr?'s1':'s2'">{{message}}</h4>
+        </div>
+        <div  class="form-floating mb-3">
+          <input formControlName="rAcno" type="email" class="form-control" id="racno" placeholder="name@example.com">
           <label for="floatingInput">RECIPIENT ACCOUNT NUMBER</label>
         </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <div *ngIf="this.moneyTransferForm.get('rAcno')?.errors && this.moneyTransferForm.get('rAcno')?.touched">
+          <p class="text-danger mt-2 mb-3">Accept only numbers</p>
+        </div>
+        <div  class="form-floating mb-3">
+          <input formControlName="amount" type="email" class="form-control" id="amounttransfer" placeholder="name@example.com">
           <label for="floatingInput">AMOUNT TO TRANSFER</label>
         </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <div *ngIf="this.moneyTransferForm.get('amount')?.errors && this.moneyTransferForm.get('amount')?.touched">
+          <p class="text-danger mt-2 mb-3">Accept only numbers</p>
+        </div>
+        <div  class="form-floating">
+          <input formControlName="psw" type="password" class="form-control" id="floatingPassword" placeholder="Password">
           <label for="floatingPassword">PASSWORD</label>
         </div>
-        <br><br><br><button style="margin-left: 35%; background-color: rgb(131, 197, 237);" type="button" class="btn btn-info">Transfer</button>
+        <div *ngIf="this.moneyTransferForm.get('psw')?.errors && this.moneyTransferForm.get('psw')?.touched">
+          <p class="text-danger mt-2 mb-3">Accept only numbers and characters</p>
+        </div>
+        <br><br><br><button (click)="moneyTransfer()" style="margin-left: 30%; background-color: rgb(75, 168, 211);" type="button" class="btn btn-info">Transfer</button>
+
+        
+
       </form>
     </div>
     
@@ -142,9 +198,9 @@
        </div>
        <div class="modal-body">
          <img style="width: 100%;" src="https://play-lh.googleusercontent.com/-a8FXhFAZjlOAQGSHFRHtCBVQ2bjiGi6UvAPIVM4A5d6j5Vdl1-LHzj7KZcsQ70pQ2XY" alt="">
-         <h1 class="mt-3" style="color: rgb(2, 32, 49); text-align: center; text-shadow: #100f0f; font-size: large;">Hello Karthika</h1><br>
-         <h4>Your Account Balance : <span style="color: rgb(5, 96, 101);">Rs 10000</span></h4><br>
-         <h4>Your Account Number : <span style="color: rgb(5, 96, 101);">230406706089</span></h4>
+         <h1 class="mt-3" id="name" style="color: rgb(2, 32, 49); text-align: center; text-shadow: #100f0f; font-size: large;">Hello {{name}}</h1><br>
+         <h4 id="ac1">Your Account Number : <span style="color: rgb(5, 96, 101);">{{acno}}</span></h4><br>
+         <h4 id="b1">Your Account Balance : <span style="color: rgb(5, 96, 101);">Rs {{balance}}</span></h4>
 
        </div>
        <div class="modal-footer">

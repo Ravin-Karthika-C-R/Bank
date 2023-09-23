@@ -1,0 +1,37 @@
+body{
+    align-items: center;
+    margin: auto;
+    /* padding: 50px; */
+    /* background-color: rgba(69, 78, 179, 0.933); */
+     /* background: #3fb3fc; */
+  /* background: #7d2ae8; */
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  background: #3fb3fc;
+   
+
+}
+.btn-group{
+    padding: 1%;
+    margin-left: 4%;    
+}
+
+.btn2{
+    background-color: rgba(0, 0, 0, 0.604);
+    margin-left: 90%;
+}
+.table{
+    background-color: bisque;
+}
+
+h5{
+    text-align: end;
+    margin-right: 70px;
+
+}
+.back{
+    align-items: center;
+}
+
+
