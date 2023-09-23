@@ -12,7 +12,7 @@ body{
   align-items: center;
   justify-content: center;
   /* background: #7d2ae8; */
-  background: #3fb3fc;
+  background: #3aa5e8;
   /* padding: 1px; */
 }
 .cc1{
@@ -180,7 +180,9 @@ body{
 }
 .forms .form-content .button input{
   color: #fff;
-  background: #3230c0;
+  /* background: #403dff; */
+  background: #4c4ceb;
+
   border-radius: 6px;
   padding: 0;
   cursor: pointer;
